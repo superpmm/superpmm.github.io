@@ -1,0 +1,12 @@
+# hexo robots.txt
+User-agent: *
+Allow: /
+Allow: /archives/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /fancybox/
+Sitemap: http://exploretime.cn/sitemap.xml
+Sitemao: htto://exploretime.cn/baidusitemap.xml
+# 百度密钥 upIhtaFLzYASuSch
