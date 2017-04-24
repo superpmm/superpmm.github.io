@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://exploretime.cn/2017/04/24/Node-js%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98%EF%BC%88%E4%B8%80%EF%BC%89/</loc>
-    <lastmod>2017-04-24T16:15:41.202Z</lastmod>
+    <lastmod>2017-04-24T16:16:29.183Z</lastmod>
     <data>
         <display>
         <title>Node.js爬虫实战（一）</title>
@@ -13,6 +13,9 @@
         
          
            
+             
+              <breadCrumb title="front_end" url="http://exploretime.cn/categories/front-end/"/>
+          
         </display>
     </data>
     </url>
