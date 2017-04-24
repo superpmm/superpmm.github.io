@@ -182,6 +182,100 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Node-js爬虫实战（一）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/24/Node-js爬虫实战（一）/">Node.js爬虫实战（一）</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/24/Node-js爬虫实战（一）/" class="archive-article-date">
+  	<time datetime="2017-04-24T15:40:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天小哥很认真地学习了利用Node.js来做爬虫知识，现在是晚上23：41，还是苦逼点做个总结，明天满课又如何。-.-</p>
+<p>小哥学习爬虫的经验还是有很多次了，例如大二自学的python爬虫，当那时候我会有一个很大的困惑，因为爬虫保存在本地的代码就像一本厚厚的天书（看不懂代码，一脸懵逼状）。</p>
+<p>转眼现在大三下学期，我已经对这些代码毫无畏惧感、而且还感到很熟悉。重新用另外一种方法实现爬虫，觉得好好玩，内心有种很充实的感觉（原谅博主自我感动，哈哈。） 言归正传了，是时候做个小总结了。</p>
+<p>此次课程分三个步骤：1.爬虫之前的准备（模块的引用）；2.爬虫代码；3.输出。</p>
+<p>先上代码：资源来自《Node.js 包教不包会》（<a href="https://github.com/alsotang/node-lessons/tree/master/lesson3）" target="_blank" rel="external">https://github.com/alsotang/node-lessons/tree/master/lesson3）</a></p>
+<p>一.模块的引用</p>
+<pre><code>var express = require(&apos;express&apos;);
+var cheerio = require(&apos;cheerio&apos;);
+var superagent = require(&apos;superagent&apos;);
+</code></pre><p>这里面涉及三个引用模块，让我对它们的作用娓娓道来：<br>    1.exprsss,是一个设置<b>中间件</b>来响应HTTP请求（让我们回想一下，浏览器和服务器交流需要的http协议，如用js原生写，有点麻烦）。用express就可以偷懒实现http请求了。<br>    2.cheerio，可以暂时初级等认为是Node.js 版的 jquery；<br>    3.superagent，则是http 方面的库，可以发起 get 或 post 请求。</p>
+<p>二.爬虫代码如下：</p>
+<pre><code>// var url = &apos;https://www.izuiyou.com/home&apos;
+
+var app = express();
+
+  app.get(&apos;/&apos;, function (req, res, next) {
+  superagent.get(&apos;https://cnodejs.org/&apos;)
+.end(function (err, sres) {
+  // 常规的错误处理
+  if (err) {
+
+    return next(err);
+  }
+  // sres.text 里面存储着网页的 html 内容，将它传给 cheerio.load 之后
+  // 就可以得到一个实现了 jquery 接口的变量，我们习惯性地将它命名为 `$`
+  // 剩下就都是 jquery 的内容了
+  var $ = cheerio.load(sres.text);
+  var items = [];
+  $(&apos;#topic_list .pull-right&apos;).each(function (idx, element) {
+  &lt;!--要找到相应需要的内容，先要分析页面的结构才能找到你所需要的东西哦。而且类名中间有空格的化，会匹配不了。  --&gt;
+    var $element = $(element);
+    items.push({
+      title: $element.attr(&apos;title&apos;), //这里爬取类&apos;pull-right&apos;的title
+      href: $element.attr(&apos;href&apos;)   //这里爬取类&apos;pull-right&apos;的href
+    });
+  });
+
+  res.send(items); //在页面输出
+});
+})
+app.listen(3000,function(){
+    console.log(&apos;app is listening at port 3000&apos;);
+})    
+</code></pre><p>这只是一种方法而已，还可以用原生的方法实现页面的爬取。后续学习到再补充啦。晚安！</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/24/Node-js爬虫实战（一）/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-Sockte-io创建实时聊天（node-js学习笔记）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -296,72 +390,6 @@ io.sockets.on(&apos;connection&apos;,function(socket) {
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/04/16/Sockte-io创建实时聊天（node-js学习笔记）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-生活的意义在于它的美" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/06/生活的意义在于它的美/">生活的意义在于它的美</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/06/生活的意义在于它的美/" class="archive-article-date">
-  	<time datetime="2017-04-06T14:08:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><h2>追寻生命的意义</h2><br><img class="currentImg" id="currentImg" src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1491491361&di=01e17d324329d7df49181281bb9117fe&src=http://5.26923.com/download/pic/000/327/470b6967939c0d63b98036b5de4283ef.jpg" data-ispreload="0" width="561.6" height="351" log-rightclick="p=5.102" title="点击查看源网页" style="top: 48px; left: 176px; cursor: pointer; width: 100%; height: 400px;"/>&nbsp;</p>
-<p><p><br>    虽然博主是个标准的理工男，高数、理论力学、传动控制等一大堆逻辑性较强的学科都能学得有模有样，但博主却也时常“为赋新词强说愁”般会考虑一些比较“没用”的东西。举个栗子，我活着是为了什么？–（你系不系傻？）</p>
-<p><p><br>    高中毕业的暑假，卧在床头完完整整地看完了余华的《活着》，哭哭啼啼地看一个老地主的儿子（“富二代”）跌跌撞撞、充满不幸、动荡的人生，当然他在故事里是活到最久的了。活生生地告诉着一个永恒不变的真理——活着就是为了活着，为了活下去。</p>
-        
-          <a class="article-more-a" href="/2017/04/06/生活的意义在于它的美/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/essay/" class="article-tag-list-link color1">essay</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/06/生活的意义在于它的美/">展开全文 >></a>
         </p>
       
 
