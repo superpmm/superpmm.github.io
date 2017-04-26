@@ -4,45 +4,8 @@
 
     
   <url>
-    <loc>http://exploretime.cn/2017/04/25/Node-js%E5%AE%9E%E8%B7%B5%EF%BC%88%E4%BA%8C%EF%BC%89-%E4%BD%BF%E7%94%A8eventproxy%E6%8E%A7%E5%88%B6%E5%B9%B6%E5%8F%91/</loc>
-    <lastmod>2017-04-25T13:46:23.063Z</lastmod>
-    <data>
-        <display>
-        <title>Node.js实践（二）.使用eventproxy控制并发</title>
-        <pubTime>2017-04-25T13:41:36.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="front_end" url="http://exploretime.cn/categories/front-end/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://exploretime.cn/2017/04/24/Node-js%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98%EF%BC%88%E4%B8%80%EF%BC%89/</loc>
-    <lastmod>2017-04-24T16:16:29.183Z</lastmod>
-    <data>
-        <display>
-        <title>Node.js爬虫实战（一）</title>
-        <pubTime>2017-04-24T15:40:28.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="front_end" url="http://exploretime.cn/categories/front-end/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
     <loc>http://exploretime.cn/2017/04/16/Sockte-io%E5%88%9B%E5%BB%BA%E5%AE%9E%E6%97%B6%E8%81%8A%E5%A4%A9%EF%BC%88node-js%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%89/</loc>
-    <lastmod>2017-04-16T11:56:12.365Z</lastmod>
+    <lastmod>2017-04-26T12:45:31.586Z</lastmod>
     <data>
         <display>
         <title>Sockte.io创建实时聊天（node.js学习笔记）</title>
@@ -51,12 +14,49 @@
          
            
              
-              <breadCrumb title="front_end" url="http://exploretime.cn/categories/front-end/"/>
+              <breadCrumb title="front-end" url="http://exploretime.cn/categories/front-end/"/>
           
         </display>
     </data>
     </url>
 
+    
+  <url>
+    <loc>http://exploretime.cn/2017/04/24/Node-js%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98%EF%BC%88%E4%B8%80%EF%BC%89/</loc>
+    <lastmod>2017-04-26T12:45:00.300Z</lastmod>
+    <data>
+        <display>
+        <title>Node.js爬虫实战（一）</title>
+        <pubTime>2017-04-24T15:40:28.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="front-end" url="http://exploretime.cn/categories/front-end/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://exploretime.cn/2017/04/25/Node-js%E5%AE%9E%E8%B7%B5%EF%BC%88%E4%BA%8C%EF%BC%89-%E4%BD%BF%E7%94%A8eventproxy%E6%8E%A7%E5%88%B6%E5%B9%B6%E5%8F%91/</loc>
+    <lastmod>2017-04-26T12:44:51.021Z</lastmod>
+    <data>
+        <display>
+        <title>Node.js实践（二）.使用eventproxy控制并发</title>
+        <pubTime>2017-04-25T13:41:36.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="front-end" url="http://exploretime.cn/categories/front-end/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
     
     

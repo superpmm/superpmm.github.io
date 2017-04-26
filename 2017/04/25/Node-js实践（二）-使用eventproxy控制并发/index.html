@@ -8,16 +8,19 @@
   <link rel="dns-prefetch" href="http://exploretime.cn">
   <title>Node.js实践（二）.使用eventproxy控制并发 | 时光滋味的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天小博主继续学习Node.js，但说实话，一入前端坑似海。我自己从进门、到在创业团队里面打杂、再到公司做实习生，一路坚持学习前端。一路上捡到了许许多多的贝壳，但我停下脚步想前眺望的时候，才发现前面珍贵的贝壳数也数不清。就像前端的知识，真心发现这是好大的世界，还有很远的路可以走。">
+  <meta name="description" content="今天小博主继续学习Node.js，但说实话，一入前端坑似海。我自己从进门、到在创业团队里面打杂、再到公司做实习生，一路坚持学习前端。一路上捡到了许许多多的贝壳，但我停下脚步想前眺望的时候，才发现前面珍贵的贝壳数也数不清。就像前端的知识，真心发现这是好大的世界，还有很远的路可以走。
+这次的学习主要摘自《Node.js 包教不包会》，但博主从零基础的角度重新学习并且对原博文做出更多的注释和解释。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node.js实践（二）.使用eventproxy控制并发">
 <meta property="og:url" content="http://exploretime.cn/2017/04/25/Node-js实践（二）-使用eventproxy控制并发/index.html">
 <meta property="og:site_name" content="时光滋味的个人博客">
-<meta property="og:description" content="今天小博主继续学习Node.js，但说实话，一入前端坑似海。我自己从进门、到在创业团队里面打杂、再到公司做实习生，一路坚持学习前端。一路上捡到了许许多多的贝壳，但我停下脚步想前眺望的时候，才发现前面珍贵的贝壳数也数不清。就像前端的知识，真心发现这是好大的世界，还有很远的路可以走。">
-<meta property="og:updated_time" content="2017-04-25T13:46:23.063Z">
+<meta property="og:description" content="今天小博主继续学习Node.js，但说实话，一入前端坑似海。我自己从进门、到在创业团队里面打杂、再到公司做实习生，一路坚持学习前端。一路上捡到了许许多多的贝壳，但我停下脚步想前眺望的时候，才发现前面珍贵的贝壳数也数不清。就像前端的知识，真心发现这是好大的世界，还有很远的路可以走。
+这次的学习主要摘自《Node.js 包教不包会》，但博主从零基础的角度重新学习并且对原博文做出更多的注释和解释。">
+<meta property="og:updated_time" content="2017-04-26T12:44:51.021Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.js实践（二）.使用eventproxy控制并发">
-<meta name="twitter:description" content="今天小博主继续学习Node.js，但说实话，一入前端坑似海。我自己从进门、到在创业团队里面打杂、再到公司做实习生，一路坚持学习前端。一路上捡到了许许多多的贝壳，但我停下脚步想前眺望的时候，才发现前面珍贵的贝壳数也数不清。就像前端的知识，真心发现这是好大的世界，还有很远的路可以走。">
+<meta name="twitter:description" content="今天小博主继续学习Node.js，但说实话，一入前端坑似海。我自己从进门、到在创业团队里面打杂、再到公司做实习生，一路坚持学习前端。一路上捡到了许许多多的贝壳，但我停下脚步想前眺望的时候，才发现前面珍贵的贝壳数也数不清。就像前端的知识，真心发现这是好大的世界，还有很远的路可以走。
+这次的学习主要摘自《Node.js 包教不包会》，但博主从零基础的角度重新学习并且对原博文做出更多的注释和解释。">
   
     <link rel="alternative" href="/atom.xml" title="时光滋味的个人博客" type="application/atom+xml">
   
@@ -202,6 +205,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>今天小博主继续学习Node.js，但说实话，一入前端坑似海。我自己从进门、到在创业团队里面打杂、再到公司做实习生，一路坚持学习前端。一路上捡到了许许多多的贝壳，但我停下脚步想前眺望的时候，才发现前面珍贵的贝壳数也数不清。就像前端的知识，真心发现这是好大的世界，还有很远的路可以走。</p>
+<p>这次的学习主要摘自《Node.js 包教不包会》，但博主从零基础的角度重新学习并且对原博文做出更多的注释和解释。</p>
 
       
 
@@ -242,7 +246,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/front_end/" class="article-tag-list-link color5">front_end</a>
+        			<a href="/categories/front-end/" class="article-tag-list-link color5">front-end</a>
         		</li>
       		
 		</ul>
