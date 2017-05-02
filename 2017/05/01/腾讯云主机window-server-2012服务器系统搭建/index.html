@@ -6,17 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://exploretime.cn">
-  <title>时光滋味的个人博客</title>
+  <title>腾讯云主机window_server_2012服务器系统搭建 | 时光滋味的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这是一个见证走向前端技术大神、吉他大神、生活大神的个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="时光滋味的个人博客">
-<meta property="og:url" content="http://exploretime.cn/page/2/index.html">
+  <meta name="description" content="最近博主一直在弄腾讯云主机的系统配置搭建，windows server 2012的系统配置搭建。主要有以下几个步骤：1.安装IIS，在服务器管理界面中添加角色即可(http://bbs.qcloud.com/thread-8420-1-1.html)2.Windows Server 2012 配置指南 之 MySQL环境搭建篇 (http://bbs.qcloud.com/forum.php?mo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="腾讯云主机window_server_2012服务器系统搭建">
+<meta property="og:url" content="http://exploretime.cn/2017/05/01/腾讯云主机window-server-2012服务器系统搭建/index.html">
 <meta property="og:site_name" content="时光滋味的个人博客">
-<meta property="og:description" content="这是一个见证走向前端技术大神、吉他大神、生活大神的个人博客">
+<meta property="og:description" content="最近博主一直在弄腾讯云主机的系统配置搭建，windows server 2012的系统配置搭建。主要有以下几个步骤：1.安装IIS，在服务器管理界面中添加角色即可(http://bbs.qcloud.com/thread-8420-1-1.html)2.Windows Server 2012 配置指南 之 MySQL环境搭建篇 (http://bbs.qcloud.com/forum.php?mo">
+<meta property="og:image" content="http://shp.qpic.cn/txdiscuz_pic/0/_bbs_qcloud_com_forum_201508_11_234413kx8bvodaxit3axtm.png/0">
+<meta property="og:image" content="http://www.myhack58.com/Article/UploadPic/2016-4/2016425134152776.png">
+<meta property="og:updated_time" content="2017-05-02T01:17:12.391Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="时光滋味的个人博客">
-<meta name="twitter:description" content="这是一个见证走向前端技术大神、吉他大神、生活大神的个人博客">
+<meta name="twitter:title" content="腾讯云主机window_server_2012服务器系统搭建">
+<meta name="twitter:description" content="最近博主一直在弄腾讯云主机的系统配置搭建，windows server 2012的系统配置搭建。主要有以下几个步骤：1.安装IIS，在服务器管理界面中添加角色即可(http://bbs.qcloud.com/thread-8420-1-1.html)2.Windows Server 2012 配置指南 之 MySQL环境搭建篇 (http://bbs.qcloud.com/forum.php?mo">
+<meta name="twitter:image" content="http://shp.qpic.cn/txdiscuz_pic/0/_bbs_qcloud_com_forum_201508_11_234413kx8bvodaxit3axtm.png/0">
   
     <link rel="alternative" href="/atom.xml" title="时光滋味的个人博客" type="application/atom+xml">
   
@@ -180,101 +184,57 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Sockte-io创建实时聊天（node-js学习笔记）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-腾讯云主机window-server-2012服务器系统搭建" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/16/Sockte-io创建实时聊天（node-js学习笔记）/">Sockte.io创建实时聊天（node.js学习笔记）</a>
+    <h1 class="article-title" itemprop="name">
+      腾讯云主机window_server_2012服务器系统搭建
     </h1>
   
 
         
-        <a href="/2017/04/16/Sockte-io创建实时聊天（node-js学习笔记）/" class="archive-article-date">
-  	<time datetime="2017-04-16T03:00:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-16</time>
+        <a href="/2017/05/01/腾讯云主机window-server-2012服务器系统搭建/" class="archive-article-date">
+  	<time datetime="2017-05-01T13:12:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>“小背景”： 这个月一直在积极补习node.js的知识，是时候做一下总结了。这次的project就是创建一个及时聊天室。</p>
-</blockquote>
-<p>首先，从需求分析，完成一个聊天室需要两部分：1.聊天页面（客户端）；2.聊天服务器；3. 客户端和服务器的连接。<br><b>1.页面：</b></p>
-<pre><code>&lt;style&gt;
-    #input{width:200px;}
-    #message{position:fixed;margin:8px;padding:8px;border:1px solid #eeeee;width:400px;height:400px;}
-&lt;/style&gt;
-&lt;body&gt;
-    你的信息：
-    &lt;input type=&quot;text&quot;&gt; &lt;!-- 这是简简单的输入框啦 --&gt;
-    &lt;div id=&quot;message&quot; &gt;&lt;/div&gt;
-&lt;script&gt;
-    &lt;!-- 待会补充 --&gt;
-&lt;/script&gt;
-&lt;/body&gt;    
-</code></pre><p><b>2.聊天室服务器：</b></p>
-<pre><code>var http = require(&apos;http&apos;).createServer(handler);
-var io = require(&apos;socket.io&apos;).listen(httpd);
-var fs = require(&apos;fs&apos;);
+        <p>最近博主一直在弄腾讯云主机的系统配置搭建，windows server 2012的系统配置搭建。主要有以下几个步骤：<br>1.安装IIS，在服务器管理界面中添加角色即可<br>(<a href="http://bbs.qcloud.com/thread-8420-1-1.html" target="_blank" rel="external">http://bbs.qcloud.com/thread-8420-1-1.html</a>)<br>2.Windows Server 2012 配置指南 之 MySQL环境搭建篇 (<a href="http://bbs.qcloud.com/forum.php?mod=viewthread&amp;tid=8422&amp;highlight=Windows%2BServer%2B2012%2B%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97" target="_blank" rel="external">http://bbs.qcloud.com/forum.php?mod=viewthread&amp;tid=8422&amp;highlight=Windows%2BServer%2B2012%2B%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97</a>)<br>3.Windows Server 2012 配置指南 之 PHP环境搭建篇<br>(<a href="http://bbs.qcloud.com/forum.php?mod=viewthread&amp;tid=8420&amp;highlight=Windows%2BServer%2B2012%2B%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97" target="_blank" rel="external">http://bbs.qcloud.com/forum.php?mod=viewthread&amp;tid=8420&amp;highlight=Windows%2BServer%2B2012%2B%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97</a>)<br>4.Windows Server 2012 配置指南 之 开启Zend OPcache加速篇<br>(<a href="http://bbs.qcloud.com/forum.php?mod=viewthread&amp;tid=8421&amp;highlight=Windows%2BServer%2B2012%2B%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97" target="_blank" rel="external">http://bbs.qcloud.com/forum.php?mod=viewthread&amp;tid=8421&amp;highlight=Windows%2BServer%2B2012%2B%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97</a>)</p>
+<p>详细的讲解要上面的链接上会有，但博主要说的是，一个系统配置的搭建，里面会有遇到不少的坑额。我就根据我遇到的坑进行补充说明一下。<br>1.首先是php的版本上，因为上面的php搭建的教程的php链接已经过时的了，博主只能到官网尝试下载，结果下载了好几个版本都是错的，之后才开悟。应该按照教程链接来举一反三，找到它喜爱相对应地址的最新版本：（<a href="http://windows.php.net/downloads/releases/php-5.6.30-nts-Win32-VC11-x86.zip）" target="_blank" rel="external">http://windows.php.net/downloads/releases/php-5.6.30-nts-Win32-VC11-x86.zip）</a> 你们终于找到理由笑博主没你们聪明了，开心吧。<br>2.之后是php配置修改问题，如图(开启Zend OPcache加速篇)：<br><img src="http://shp.qpic.cn/txdiscuz_pic/0/_bbs_qcloud_com_forum_201508_11_234413kx8bvodaxit3axtm.png/0" alt=""><br>修改配置的时候，请一定要把前面的分号（“;”）去掉，否则只好回家早点洗洗睡咯。<br><a id="more"></a><br>3.之后又遇到了一个大问题，就是服务器和自己电脑文件传送的问题。filezilla的client端和filezilla的server端，在自己电脑装的是clent端，在服务器端装的是server端。而且server端的配置要修改一下才行哦，否则传送的文件都接受不了。心碎一地也没卵用。在添加user的里面一定要把read、write选项提勾了。否则，都是泪。<br><img src="http://www.myhack58.com/Article/UploadPic/2016-4/2016425134152776.png" alt=""></p>
 
-httpd.listen(4000);
-
-function handler(req,res) {
-    fs.readFile(__dirname + &apos;/index.html&apos;,function(err,data){
-    if(err){
-        res.wirteHead(500);
-        return res.end(&apos;Error loading index.html&apos;);
-    }
-    res.writeHead(200);
-    res.end(data);
-});
-}
-
-io.sockets.on(&apos;connection&apos;,function(socket) {
-    socket.on(&apos;clientMesage&apos;,function(content) {
-        socket.emit(&apos;serverMessage&apos;,&apos;you said:&apos;, + content);
-        socket.broadcast.emit(&apos;serverMessage&apos;,socket.id + &apos;said:&apos; + content);
-        });
-    });
-</code></pre><p><b>3.服务器和客户端的连接：</b></p>
-<pre><code>&lt;script src=&quot;http://localhost:4000/socket.io/socket.io.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-    var messageElement = document.getElementById(&apos;messages&apos;);
-    var lastMessageElement = null;
-
-    function addMessage(message) {
-        var newMessageElement = document.createElement(&apos;div&apos;);
-        var newMessageText = document.createTextNode(message);
-
-        newMessageElement.appenChild(newMessageText);
-        messageElement.insertBefore(newMessageElement,lastMessageElement);
-        lastMessageElement = newMessageElement;
-    }
-    var socket = io.connect(&apos;http://localhost:4000&apos;);
-        socket.on(&apos;serverMessage&apos;,function(content) {
-            addMessage(content);
-    });
-
-    var inputElement = document.getElementById(&apos;input&apos;);
-    inputElement.onkeydown = function(keyboarEvent) {
-        if (keyboardEvent.keyCode === 13) {
-            socket.emit(&apos;clientMessage&apos;,inputElement.value);
-            inputElement.value = &apos;&apos;;
-            return false;
-        }else {
-            return true;
-        }
-    };
-&lt;/script&gt;
-</code></pre>
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -286,7 +246,7 @@ io.sockets.on(&apos;connection&apos;,function(socket) {
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/front-end/" class="article-tag-list-link color5">front-end</a>
+        			<a href="/categories/back_end/" class="article-tag-list-link color4">back_end</a>
         		</li>
       		
 		</ul>
@@ -294,18 +254,74 @@ io.sockets.on(&apos;connection&apos;,function(socket) {
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/16/Sockte-io创建实时聊天（node-js学习笔记）/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://exploretime.cn/2017/05/01/腾讯云主机window-server-2012服务器系统搭建/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/04/25/Node-js实践（二）-使用eventproxy控制并发/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Node.js实践（二）.使用eventproxy控制并发</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
@@ -313,77 +329,28 @@ io.sockets.on(&apos;connection&apos;,function(socket) {
 
 
   
-    <article id="post-生活的意义在于它的美" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/06/生活的意义在于它的美/">生活的意义在于它的美</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/06/生活的意义在于它的美/" class="archive-article-date">
-  	<time datetime="2017-04-06T14:08:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><h2>追寻生命的意义</h2><br><img class="currentImg" id="currentImg" src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1491491361&di=01e17d324329d7df49181281bb9117fe&src=http://5.26923.com/download/pic/000/327/470b6967939c0d63b98036b5de4283ef.jpg" data-ispreload="0" width="561.6" height="351" log-rightclick="p=5.102" title="点击查看源网页" style="top: 48px; left: 176px; cursor: pointer; width: 100%; height: 400px;"/>&nbsp;</p>
-<p><p><br>    虽然博主是个标准的理工男，高数、理论力学、传动控制等一大堆逻辑性较强的学科都能学得有模有样，但博主却也时常“为赋新词强说愁”般会考虑一些比较“没用”的东西。举个栗子，我活着是为了什么？–（你系不系傻？）</p>
-<p><p><br>    高中毕业的暑假，卧在床头完完整整地看完了余华的《活着》，哭哭啼啼地看一个老地主的儿子（“富二代”）跌跌撞撞、充满不幸、动荡的人生，当然他在故事里是活到最久的了。活生生地告诉着一个永恒不变的真理——活着就是为了活着，为了活下去。</p>
-        
-          <a class="article-more-a" href="/2017/04/06/生活的意义在于它的美/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/essay/" class="article-tag-list-link color1">essay</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/06/生活的意义在于它的美/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="腾讯云主机window-server-2012服务器系统搭建" data-title="腾讯云主机window_server_2012服务器系统搭建" data-url="http://exploretime.cn/2017/05/01/腾讯云主机window-server-2012服务器系统搭建/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
   
-  
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
-    </nav>
-  
+
+
 
 
           </div>
@@ -405,8 +372,8 @@ io.sockets.on(&apos;connection&apos;,function(socket) {
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
@@ -480,6 +447,10 @@ io.sockets.on(&apos;connection&apos;,function(socket) {
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">front-end</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">技术笔记</a>

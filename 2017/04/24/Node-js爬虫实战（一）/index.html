@@ -18,7 +18,7 @@
 <meta property="og:description" content="今天小哥很认真地学习了利用Node.js来做爬虫知识，现在是晚上23：41，还是苦逼点做个总结，明天满课又如何。-.-
 小哥学习爬虫的经验还是有很多次了，例如大二自学的python爬虫，当那时候我会有一个很大的困惑，因为爬虫保存在本地的代码就像一本厚厚的天书（看不懂代码，一脸懵逼状）。
 转眼现在大三下学期，我已经对这些代码毫无畏惧感、而且还感到很熟悉。重新用另外一种方法实现爬虫，觉得好好玩，内心有">
-<meta property="og:updated_time" content="2017-04-26T12:47:57.330Z">
+<meta property="og:updated_time" content="2017-05-02T01:17:34.709Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.js爬虫实战（一）">
 <meta name="twitter:description" content="今天小哥很认真地学习了利用Node.js来做爬虫知识，现在是晚上23：41，还是苦逼点做个总结，明天满课又如何。-.-
@@ -212,6 +212,7 @@
 <p>转眼现在大三下学期，我已经对这些代码毫无畏惧感、而且还感到很熟悉。重新用另外一种方法实现爬虫，觉得好好玩，内心有种很充实的感觉（原谅博主自我感动，哈哈。） 言归正传了，是时候做个小总结了。</p>
 <p>此次课程分三个步骤：1.爬虫之前的准备（模块的引用）；2.爬虫代码；3.输出。</p>
 <p>先上代码：资源来自《Node.js 包教不包会》（<a href="https://github.com/alsotang/node-lessons/tree/master/lesson3）" target="_blank" rel="external">https://github.com/alsotang/node-lessons/tree/master/lesson3）</a></p>
+<a id="more"></a>
 <p>一.模块的引用</p>
 <pre><code>var express = require(&apos;express&apos;);
 var cheerio = require(&apos;cheerio&apos;);
@@ -291,7 +292,7 @@ app.listen(3000,function(){
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/front-end/" class="article-tag-list-link color5">front-end</a>
+        			<a href="/categories/front_end/" class="article-tag-list-link color5">front_end</a>
         		</li>
       		
 		</ul>
@@ -501,6 +502,10 @@ app.listen(3000,function(){
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">front-end</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">技术笔记</a>
